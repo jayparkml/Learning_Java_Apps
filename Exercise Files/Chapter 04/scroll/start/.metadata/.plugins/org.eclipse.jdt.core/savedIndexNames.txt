@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/Users/toddperkins/Desktop/Exercise Files/Chapter 04/scroll/start/.metadata/.plugins/org.eclipse.jdt.core
+4154239352.index
+2528129215.index

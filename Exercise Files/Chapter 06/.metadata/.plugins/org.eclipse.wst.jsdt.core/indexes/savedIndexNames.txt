@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+/Users/toddperkins/Desktop/Exercise Files/Chapter 06/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+1898577040.index
+817002161.index
+648028115.index
+75435866.index
+1898576974.index
+2475753387.index
+3692254145.index

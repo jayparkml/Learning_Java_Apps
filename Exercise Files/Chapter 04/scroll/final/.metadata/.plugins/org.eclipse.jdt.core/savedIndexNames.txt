@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\toddp\Desktop\Exercise Files\Chapter 04\scroll\final\.metadata\.plugins\org.eclipse.jdt.core
+1261500937.index
