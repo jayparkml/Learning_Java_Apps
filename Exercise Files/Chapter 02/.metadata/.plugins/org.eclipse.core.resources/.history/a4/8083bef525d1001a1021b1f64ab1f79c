@@ -4,17 +4,14 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.List;
 
+import sun.jvm.hotspot.runtime.StaticBaseConstructor;
+
 public class Review {
 
 	public static void main(String[] args) {
-		try {
-			loadFile("file.txt");
-		} catch (IOException e) {
-			System.out.println(e);
-		}
-	}
+			
 		
-		static void loadFile(String filename) throws IOException {
+		static void loadFile(String filename) {
 			Path file = FileSystems.getDefault().getPath("", filename);
 			List<String> lines = Files.readAllLines(file);
 //			for(int i = 0; i < lines.size(); i++) { // Way 1
@@ -86,6 +83,6 @@ public class Review {
 //	
 //	static void printS(String data) {
 //		System.out.println(data);
-	
+	}
 	
 }

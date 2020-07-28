@@ -8,9 +8,10 @@ public class Review {
 
 	public static void main(String[] args) {
 		try {
-			loadFile("file.txt");
+			loadFile("files.txt");
 		} catch (IOException e) {
-			System.out.println(e);
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 		
