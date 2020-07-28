@@ -1,0 +1,13 @@
+package com.toddperkins;
+
+public class Review {
+
+	public static void main(String[] args) {
+		printS("Static method"); //Review.print
+	}
+
+	static void printS(String data) {
+		System.out.println(data);
+	}
+	
+}
