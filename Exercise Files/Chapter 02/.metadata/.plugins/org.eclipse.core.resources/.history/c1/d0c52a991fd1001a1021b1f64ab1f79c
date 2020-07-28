@@ -1,0 +1,13 @@
+package com.toddperkins;
+
+public class MyClass {
+
+	
+	int myInt = 5;
+	
+	
+	void myMethod() {
+		System.out.println("my method");
+	}
+	
+}

@@ -10,12 +10,12 @@ public class Review {
 		
 		Path file = FileSystems.getDefault().getPath("", "file.txt");
 		List<String> lines = Files.readAllLines(file);
-//		for(int i = 0; i < lines.size(); i++) { // Way 1
+//		for(int i = 0; i < lines.size(); i++) {
 //			System.out.println(lines.get(i));
 //		}
 		
-//		lines.forEach((str) -> System.out.println(str)); // Way 2
-		lines.forEach(System.out::println); // Way 3
+		lines.forEach((str) -> System.out.println(str););
+		
 		
 		
 //		Scanner scanner = new Scanner(System.in);
