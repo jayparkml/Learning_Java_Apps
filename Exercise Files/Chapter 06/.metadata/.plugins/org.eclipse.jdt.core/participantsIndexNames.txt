@@ -1,3 +1,5 @@
 INDEX VERSION 1.131
-/Users/toddperkins/Desktop/Exercise Files/Chapter 06/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2475753387.index
-/JavaWebAppExample/src/main/resources
+C:\Users\parks\Desktop\Coding\Learning_Java_Apps\Exercise Files\Chapter 06\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2129583809.index
+\JavaWebAppExample\src\main\resources
+\Users\toddperkins\Desktop\Exercise Files\Chapter 06\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2475753387.index
+\JavaWebAppExample\src\main\resources

@@ -24,7 +24,7 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
-		<item value="All Catalogs" key="catalog"/>
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -36,6 +36,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\parks\Desktop\Coding\Learning_Java_Apps\Exercise Files\Chapter 06\Servers"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

@@ -1,0 +1,4 @@
+127.0.0.1 - - [29/Jul/2020:10:26:35 -0500] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:10:26:36 -0500] "GET /JavaWebAppExample/index.jsp HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:10:28:49 -0500] "GET /JavaWebAppExample/index.jsp HTTP/1.1" 200 58
+0:0:0:0:0:0:0:1 - - [29/Jul/2020:10:29:00 -0500] "GET /JavaWebAppExample/index.jsp HTTP/1.1" 200 57
