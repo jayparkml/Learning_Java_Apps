@@ -1,0 +1,98 @@
+package com.jaypark;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import java.awt.GridLayout;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import javax.swing.JTextField;
+import java.awt.CardLayout;
+import net.miginfocom.swing.MigLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JToggleButton;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+
+public class SwingBasics {
+
+	private JFrame frame;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	JLabel label = new JLabel("");
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SwingBasics window = new SwingBasics();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
+	class Radiolistener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			JRadioButton btn = (JRadioButton)e.getSource();
+		}
+		
+	}
+	
+	/**
+	 * Create the application.
+	 */
+	public SwingBasics() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JRadioButton item1 = new JRadioButton("Item 1");
+		buttonGroup.add(item1);
+		item1.setBounds(6, 7, 109, 23);
+		frame.getContentPane().add(item1);
+		
+		JRadioButton item2 = new JRadioButton("Item 2");
+		buttonGroup.add(item2);
+		item2.setBounds(6, 32, 109, 23);
+		frame.getContentPane().add(item2);
+		
+		JRadioButton item3 = new JRadioButton("Item 3");
+		buttonGroup.add(item3);
+		item3.setBounds(6, 58, 109, 23);
+		frame.getContentPane().add(item3);
+		
+		
+		label.setBounds(16, 88, 180, 14);
+		frame.getContentPane().add(label);
+		
+		
+		
+		
+	}
+}

@@ -3,28 +3,14 @@ package com.jaypark;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import java.awt.BorderLayout;
-import javax.swing.JButton;
-import java.awt.GridLayout;
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-import com.jgoodies.forms.layout.FormSpecs;
-import javax.swing.JTextField;
-import java.awt.CardLayout;
-import net.miginfocom.swing.MigLayout;
-import javax.swing.JCheckBox;
-import javax.swing.JToggleButton;
-import javax.swing.SwingConstants;
-import java.awt.Color;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JTable;
+import javax.swing.border.BevelBorder;
+import javax.swing.table.AbstractTableModel;
 
 public class SwingBasics {
 
 	private JFrame frame;
-	private JTextField textField;
+	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -41,7 +27,33 @@ public class SwingBasics {
 			}
 		});
 	}
+	
+	class TableData extends AbstractTableModel {
 
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = -8834134773832826254L;
+
+		@Override
+		public int getRowCount() {
+			// TODO Auto-generated method stub
+			return 10;
+		}
+
+		@Override
+		public int getColumnCount() {
+			// TODO Auto-generated method stub
+			return 10;
+		}
+
+		@Override
+		public Object getValueAt(int rowIndex, int columnIndex) {
+			// TODO Auto-generated method stub
+			return "Hello";
+		}}
+	
+	
 	/**
 	 * Create the application.
 	 */
@@ -58,31 +70,18 @@ public class SwingBasics {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		textField = new JTextField();
-		textField.setHorizontalAlignment(SwingConstants.RIGHT);
-		textField.setBounds(66, 11, 212, 20);
-		frame.getContentPane().add(textField);
-		textField.setColumns(10);
+		table = new JTable();
+		table.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
+		table.setBounds(10, 11, 414, 239);
+		frame.getContentPane().add(table);
 		
-		JLabel label2 = new JLabel("");
-		label2.setBounds(26, 51, 382, 14);
-		frame.getContentPane().add(label2);
+		TableData data = new TableData();
+		table.setModel(data);
 		
-		JButton button = new JButton("Say Hi");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				label2.setText("Hi " + textField.getText());
-			}
-		});
-		button.setForeground(Color.BLACK);
-		button.setBounds(288, 10, 80, 23);
-		frame.getContentPane().add(button);
 		
-		JLabel label = new JLabel("Name:");
-		label.setHorizontalAlignment(SwingConstants.TRAILING);
-		label.setBounds(10, 14, 46, 14);
-		frame.getContentPane().add(label);
-		
+
+	
+
 		
 	}
 }

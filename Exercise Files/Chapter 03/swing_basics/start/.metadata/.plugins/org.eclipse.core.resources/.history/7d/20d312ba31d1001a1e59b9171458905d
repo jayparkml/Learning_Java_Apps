@@ -1,0 +1,78 @@
+package com.jaypark;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.JButton;
+import java.awt.GridLayout;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import javax.swing.JTextField;
+import java.awt.CardLayout;
+import net.miginfocom.swing.MigLayout;
+import javax.swing.JCheckBox;
+import javax.swing.JToggleButton;
+import javax.swing.SwingConstants;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+
+public class SwingBasics {
+
+	private JFrame frame;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					SwingBasics window = new SwingBasics();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public SwingBasics() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel label = new JLabel("Off");
+		label.setBounds(23, 37, 46, 14);
+		frame.getContentPane().add(label);
+		
+		JCheckBox checkbox = new JCheckBox("Toggle On/Off");
+		checkbox.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String text = (checkbox.isSelected()) ? "On" : "Off"; // if check box is selected then text is On
+				label.setText(text);
+			}
+		});
+		checkbox.setBounds(0, 7, 104, 23);
+		frame.getContentPane().add(checkbox);
+		
+		
+		
+		
+	}
+}
