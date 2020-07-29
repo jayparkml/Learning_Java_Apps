@@ -1,11 +1,13 @@
 package com.toddperkins;
 
 import java.awt.EventQueue;
-import java.io.IOException;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.FileSystems;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.swing.JFrame;
 import javax.swing.JTable;
@@ -49,7 +51,11 @@ public class Tables {
 		void loadFile(String fileName) {
 			Path file = FileSystems.getDefault().getPath("", fileName);
 			try {
-				List<String> lines = Files.readAllLines(file);
+				InputStream input = Tables.class.getResourceAsStream(fileName);
+				InputStreamReader reader = new InputStreamReader(input);
+				BufferedReader buffer = new BufferedReader(reader);
+				
+				List<String> lines = buffer.lines().collect(Collectors.toList());
 				for(int i = 0; i< lines.size(); i++) {
 					String line = lines.get(i);
 					String[] lineArray = line.split(",");
@@ -62,7 +68,7 @@ public class Tables {
 					}
 				
 				}
-			} catch (IOException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
